@@ -1,0 +1,32 @@
+body {
+    background-image: url('https://cdn.discordapp.com/attachments/1004051939119603743/1129515522048917615/joshuaopel_A_realistic_photo_of_a_father_telling_a_joke_to_a_gr_100f8a7d-d519-4edc-8a10-1bbbb7e25df9.png'); /* Add your custom background image */
+    background-size: cover;
+    font-family: Arial, sans-serif;
+}
+
+#jokeContainer {
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+    margin-top: 10%;
+}
+
+#generateJokeButton {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 20px 0;
+    border: none;
+    background-color: #008CBA; /* Choose your own color */
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#jokeDisplayField {
+    font-size: 1.2em;
+    color: #333333; /* Choose your own color */
+}
