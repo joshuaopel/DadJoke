@@ -1,49 +1,32 @@
-body {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(4, 1fr);
-    grid-gap: 10px;
-    height: 100vh;
-    background-image: url('https://cdn.discordapp.com/attachments/1004051939119603743/1129515522048917615/joshuaopel_A_realistic_photo_of_a_father_telling_a_joke_to_a_gr_100f8a7d-d519-4edc-8a10-1bbbb7e25df9.png'); 
-    background-size: cover;
-    font-family: Arial, sans-serif;
+:root {
+    --cellCount: 3;
+    --width: 720px;
+    --cell: calc(var(--width) / var(--cellCount));
 }
 
-#jokeContainer {
-    position: relative;
-    grid-column: 2 / span 2;
-    grid-row: 2 / span 2;
-    width: 80%;
-    padding-top: 80%; /* For 1:1 aspect ratio */
-    background-color: #ffffff;
-    border-radius: 5px;
-    box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+html, body {
+    margin: 0;
+    padding: 0;
+    width: var(--width);
+    height: auto;
     overflow: hidden;
 }
 
-#jokeContainer:after {
-    content: "";
-    display: block;
-    padding-bottom: 100%;
+#texture {
+    display: grid;
+    grid-template-columns: repeat(var(--cellCount), 1fr);
+    grid-template-rows: repeat(var(--cellCount), 1fr);
+    width: var(--width);
+    height: var(--width);
 }
 
-#jokeContainer > div {
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
+#titleCell, #buttonCell, #jokeCell {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
-    padding: 20px;
-}
-
-#generateJokeButton, #jokeDisplayField, h1 {
-    width: 100%;
-    margin: 10px 0;
+    justify-content: center;
     text-align: center;
+    font-size: 1.5em;
+    border: 1px solid #000;
 }
 
 #generateJokeButton {
@@ -56,6 +39,6 @@ body {
 }
 
 #jokeDisplayField {
+    margin: 10px;
     font-size: 1.2em;
-    color: #333333;
 }
