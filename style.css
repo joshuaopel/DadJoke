@@ -10,6 +10,7 @@ html, body {
     width: var(--width);
     height: auto;
     overflow: hidden;
+    background-image: none;
 }
 
 #texture {
